@@ -1,0 +1,21 @@
+# Given string
+text = "Today is a sunny day"
+
+# Split the string into words
+words = text.split()
+
+# Extract the words "today" and "sunny"
+word1 = words[0].lower()  # "today"
+word2 = words[3].lower()  # "sunny"
+
+# Get the last two letters of each word
+last_two_word1 = word1[-2:]
+last_two_word2 = word2[-2:]
+
+# Concatenate the last two letters and form the final statement
+final_statement = last_two_word1 + " " + last_two_word2
+
+# Write the statement backwards
+backward_statement = final_statement[::-1]
+
+print("Last two letters of 'today' and 'sunny' backwards:", backward_statement)

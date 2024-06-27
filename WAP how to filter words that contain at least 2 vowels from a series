@@ -1,0 +1,16 @@
+import pandas as pd
+
+# Sample series
+data = pd.Series(["hello", "world", "python", "programming", "data", "science"])
+
+# Function to count vowels in a word
+def count_vowels(word):
+    vowels = 'aeiou'
+    return sum(1 for char in word if char in vowels)
+
+# Filter words that contain at least 2 vowels
+filtered_words = data[data.apply(lambda x: count_vowels(x) >= 2)]
+
+# Print the result
+print("Words with at least 2 vowels:")
+print(filtered_words)

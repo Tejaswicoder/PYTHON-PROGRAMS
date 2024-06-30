@@ -1,0 +1,25 @@
+# Function to count characters in a string
+def count_characters(input_string):
+    # Create an empty dictionary to store the character counts
+    char_count = {}
+    
+    # Iterate over each character in the string
+    for char in input_string:
+        # If the character is already a key in the dictionary, increment its value
+        if char in char_count:
+            char_count[char] += 1
+        # If the character is not a key in the dictionary, add it with a value of 1
+        else:
+            char_count[char] = 1
+    
+    # Return the dictionary with character counts
+    return char_count
+
+# Ask the user to enter a string
+input_string = input("Enter a string: ")
+
+# Get the dictionary of character counts
+char_count = count_characters(input_string)
+
+# Print the dictionary in the desired format
+print("Characters with its count:", char_count)
